@@ -108,6 +108,7 @@ LANDING_PAGE = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#03DAC8">
     <title>SALAH_VICO_AI - تحويل النص إلى صوت</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
@@ -575,7 +576,7 @@ APP_TEMPLATE = """
                     <i class="fab fa-facebook"></i> فيسبوك
                 </a>
             </div>
-            <div class="countdown">جار توليد الصوت الآن...<span id="ad-countdown">10</span> ثوانٍ...</div>
+            <div class="countdown">سيستمر التوليد خلال <span id="ad-countdown">10</span> ثوانٍ...</div>
         </div>
     </div>
     <div class="container">
@@ -621,9 +622,8 @@ APP_TEMPLATE = """
                 </div>
                 <form id="tts-form">
                     <input type="hidden" id="selected-voice-data" name="voice_data">
-                    <textarea id="text-input" name="text" required maxlength="6000">منصة SALAH_VICO_AI. تُحيي الأصوات!  
- تقنية ذكية لتركيب اللهجة الفنية عبر تحليل متقدم للنماذج الصوتية.  
-> التطوير البرمجي بالكامل: صَلاح أحمدين</textarea>
+                    <textarea id="text-input" name="text" required maxlength="6000">مرحبا بكم في موقع SALAH_VICO_AI هذا الموقع الخ.... 
+تم تطوير هذا الموقع بواسطة المطور صلاح أحمدين</textarea>
                     <button type="submit" class="button primary"><i class="fas fa-volume-up"></i> توليد الصوت</button>
                 </form>
                 <div id="loader" class="loader hidden">
@@ -787,4 +787,4 @@ def generate_audio():
         return jsonify({"error": f"حدث خطأ داخلي في الخادم: {e}"}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5009, debug=False)
+    app.run(host='0.0.0.0', port=5065, debug=False)
